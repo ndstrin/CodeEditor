@@ -42,6 +42,8 @@
             this.toolStripStatusLabel_TextStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripStatusLabel_Lines = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel_Chars = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip_Main.SuspendLayout();
             this.statusStrip_Main.SuspendLayout();
             this.SuspendLayout();
@@ -71,28 +73,30 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveAsToolStripMenuItem.Text = "Save As";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
             // statusStrip_Main
             // 
             this.statusStrip_Main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel_TextStatus});
+            this.toolStripStatusLabel_TextStatus,
+            this.toolStripStatusLabel_Lines,
+            this.toolStripStatusLabel_Chars});
             this.statusStrip_Main.Location = new System.Drawing.Point(0, 679);
             this.statusStrip_Main.Name = "statusStrip_Main";
             this.statusStrip_Main.Size = new System.Drawing.Size(1140, 22);
@@ -141,7 +145,7 @@
             // toolStripStatusLabel_TextStatus
             // 
             this.toolStripStatusLabel_TextStatus.Name = "toolStripStatusLabel_TextStatus";
-            this.toolStripStatusLabel_TextStatus.Size = new System.Drawing.Size(1125, 17);
+            this.toolStripStatusLabel_TextStatus.Size = new System.Drawing.Size(1011, 17);
             this.toolStripStatusLabel_TextStatus.Spring = true;
             // 
             // label1
@@ -160,6 +164,18 @@
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "View";
+            // 
+            // toolStripStatusLabel_Lines
+            // 
+            this.toolStripStatusLabel_Lines.Name = "toolStripStatusLabel_Lines";
+            this.toolStripStatusLabel_Lines.Size = new System.Drawing.Size(40, 17);
+            this.toolStripStatusLabel_Lines.Text = "Lines: ";
+            // 
+            // toolStripStatusLabel_Chars
+            // 
+            this.toolStripStatusLabel_Chars.Name = "toolStripStatusLabel_Chars";
+            this.toolStripStatusLabel_Chars.Size = new System.Drawing.Size(43, 17);
+            this.toolStripStatusLabel_Chars.Text = "Chars: ";
             // 
             // FM_CodeEditorMain
             // 
@@ -200,6 +216,8 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_TextStatus;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         internal System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_Lines;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_Chars;
     }
 }
 

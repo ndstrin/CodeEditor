@@ -73,7 +73,12 @@ namespace CodeEditor
             try 
             { 
                 //Updates the Raw Text Value when updated.
-                FileTextRaw = RTB_MainEditor.Text; 
+                FileTextRaw = RTB_MainEditor.Text;
+                var linecount =  RTB_MainEditor.Lines.Count();
+                var charCount = RTB_MainEditor.Text.Length;
+                //Updates the total lines and Char count in toolstrip
+                toolStripStatusLabel_Lines.Text = $"Lines: {linecount.ToString()}";
+                toolStripStatusLabel_Chars.Text = $"Chars: {charCount.ToString()}";
             }
             catch { MessageBox.Show("Error Updating Text"); }
         }
@@ -110,6 +115,7 @@ namespace CodeEditor
         {
             try
             {
+                int NumCount = 0;
                 int start = 0;
                 //Check for Empty Search Data
                 if (Value != string.Empty)
@@ -128,6 +134,8 @@ namespace CodeEditor
                                 RTB_MainEditor.SelectionStart = wordstart;
                                 RTB_MainEditor.SelectionLength = Value.Length;
                                 RTB_MainEditor.SelectionBackColor = Color.Yellow;
+                                //Adds Count to number of times the value was founded
+                                NumCount++;
                             }
                             else
                             {
@@ -138,6 +146,8 @@ namespace CodeEditor
                             start += wordstart + Value.Length;
 
                         }
+                        toolStripStatusLabel_TextStatus.Text = $"Found: {Value} - {NumCount} Times";
+
 
 
 
@@ -145,11 +155,7 @@ namespace CodeEditor
                 }
             }
             catch(Exception ex) { MessageBox.Show("Error Searching" + ex); }
-            //Cleans up if it fails or not
-            finally 
-            {
-                toolStripStatusLabel_TextStatus.Text = "";
-            }
+
 
         }
 
@@ -170,6 +176,7 @@ namespace CodeEditor
         private void TXB_SearchBox_TextChanged(object sender, EventArgs e)
         {
             ClearSearch();
+            toolStripStatusLabel_TextStatus.Text = "";
         }
 
     }
