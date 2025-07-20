@@ -115,6 +115,7 @@ namespace CodeEditor
         {
             try
             {
+                //Set intial Values
                 int NumCount = 0;
                 int start = 0;
                 //Check for Empty Search Data
