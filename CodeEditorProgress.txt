@@ -1,0 +1,20 @@
+This is my custom Text Editor 
+
+Current Features
+* Open Files
+* Save/SaveAS 
+* Search for all values provided in the searchbox and Highlight them
+* Live updated Total Lines and Char count for the Document at the bottom of the screen
+
+Future Featrues may inculde:
+* Xml Struture and XSD validation 
+* Xml Formating and Color tags
+* Line numbers
+* Spellcheck
+
+
+
+Expections and Error Handle
+
+IF statements are a great way to validate data before processing to limit errors in the code such as null vaules if nothing is there.
+Try/Catch/Finally blocks are great for using to handle errors not all ready accounted for in other code with out crashing the entire application. 
